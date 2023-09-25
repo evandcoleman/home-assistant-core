@@ -1,9 +1,6 @@
 image: ghcr.io/home-assistant/{arch}-homeassistant
 build_from:
   amd64: ghcr.io/home-assistant/amd64-homeassistant-base:2023.08.0
-codenotary:
-  signer: notary@home-assistant.io
-  base_image: notary@home-assistant.io
 cosign:
   base_identity: https://github.com/home-assistant/docker/.*
   identity: https://github.com/home-assistant/core/.*
