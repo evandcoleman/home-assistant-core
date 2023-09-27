@@ -95,6 +95,8 @@ jobs:
           tag: musllinux_1_2
           arch: ${{ matrix.arch }}
           wheels-key: ${{ secrets.WHEELS_KEY }}
+          wheels-host: ${{ secrets.WHEELS_HOST }}
+          wheels-index: ${{ secrets.WHEELS_INDEX }}
           env-file: true
           apk: "libffi-dev;openssl-dev;yaml-dev"
           skip-binary: aiohttp
@@ -104,7 +106,6 @@ jobs:
 
   integrations_cp311:
     name: Build wheels ${{ matrix.abi }} for ${{ matrix.arch }}
-    if: github.repository_owner == 'home-assistant'
     needs: init
     runs-on: ubuntu-latest
     strategy:
@@ -176,6 +177,8 @@ jobs:
           tag: musllinux_1_2
           arch: ${{ matrix.arch }}
           wheels-key: ${{ secrets.WHEELS_KEY }}
+          wheels-host: ${{ secrets.WHEELS_HOST }}
+          wheels-index: ${{ secrets.WHEELS_INDEX }}
           env-file: true
           apk: "bluez-dev;libffi-dev;openssl-dev;glib-dev;eudev-dev;libxml2-dev;libxslt-dev;libpng-dev;libjpeg-turbo-dev;tiff-dev;cups-dev;gmp-dev;mpfr-dev;mpc1-dev;ffmpeg-dev;gammu-dev;yaml-dev;openblas-dev;fftw-dev;lapack-dev;gfortran;blas-dev;eigen-dev;freetype-dev;glew-dev;harfbuzz-dev;hdf5-dev;libdc1394-dev;libtbb-dev;mesa-dev;openexr-dev;openjpeg-dev;uchardet-dev"
           skip-binary: aiohttp;grpcio;sqlalchemy;protobuf
@@ -190,6 +193,8 @@ jobs:
           tag: musllinux_1_2
           arch: ${{ matrix.arch }}
           wheels-key: ${{ secrets.WHEELS_KEY }}
+          wheels-host: ${{ secrets.WHEELS_HOST }}
+          wheels-index: ${{ secrets.WHEELS_INDEX }}
           env-file: true
           apk: "bluez-dev;libffi-dev;openssl-dev;glib-dev;eudev-dev;libxml2-dev;libxslt-dev;libpng-dev;libjpeg-turbo-dev;tiff-dev;cups-dev;gmp-dev;mpfr-dev;mpc1-dev;ffmpeg-dev;gammu-dev;yaml-dev;openblas-dev;fftw-dev;lapack-dev;gfortran;blas-dev;eigen-dev;freetype-dev;glew-dev;harfbuzz-dev;hdf5-dev;libdc1394-dev;libtbb-dev;mesa-dev;openexr-dev;openjpeg-dev;uchardet-dev"
           skip-binary: aiohttp;grpcio;sqlalchemy;protobuf
@@ -204,6 +209,8 @@ jobs:
           tag: musllinux_1_2
           arch: ${{ matrix.arch }}
           wheels-key: ${{ secrets.WHEELS_KEY }}
+          wheels-host: ${{ secrets.WHEELS_HOST }}
+          wheels-index: ${{ secrets.WHEELS_INDEX }}
           env-file: true
           apk: "bluez-dev;libffi-dev;openssl-dev;glib-dev;eudev-dev;libxml2-dev;libxslt-dev;libpng-dev;libjpeg-turbo-dev;tiff-dev;cups-dev;gmp-dev;mpfr-dev;mpc1-dev;ffmpeg-dev;gammu-dev;yaml-dev;openblas-dev;fftw-dev;lapack-dev;gfortran;blas-dev;eigen-dev;freetype-dev;glew-dev;harfbuzz-dev;hdf5-dev;libdc1394-dev;libtbb-dev;mesa-dev;openexr-dev;openjpeg-dev;uchardet-dev"
           skip-binary: aiohttp;grpcio;sqlalchemy;protobuf
