@@ -200,7 +200,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build base image
-        uses: ${{ github.repository_owner }}/home-assistant-builder@master
+        uses: evandcoleman/home-assistant-builder@master
         with:
           args: |
             $BUILD_ARGS \
