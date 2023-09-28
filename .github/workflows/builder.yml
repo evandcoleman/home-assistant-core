@@ -290,10 +290,6 @@ jobs:
             done
           }
 
-          function validate_image() {
-            
-          }
-
           function push_dockerhub() {
             local image=${1}
             local tag=${2}
@@ -304,8 +300,6 @@ jobs:
 
           # Pull images from github container registry and verify signature
           docker pull "ghcr.io/${{ github.repository_owner }}/amd64-homeassistant:${{ needs.init.outputs.version }}"
-
-          validate_image "ghcr.io/${{ github.repository_owner }}/amd64-homeassistant:${{ needs.init.outputs.version }}"
 
           # Upload images to dockerhub
           push_dockerhub "amd64-homeassistant" "${{ needs.init.outputs.version }}"
