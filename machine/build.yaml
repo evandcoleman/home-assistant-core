@@ -1,4 +1,4 @@
-image: ghcr.io/home-assistant/{machine}-homeassistant
+image: ghcr.io/evandcoleman/{machine}-homeassistant
 build_from:
   aarch64: "ghcr.io/home-assistant/aarch64-homeassistant:"
   armv7: "ghcr.io/home-assistant/armv7-homeassistant:"

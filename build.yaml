@@ -1,4 +1,4 @@
-image: ghcr.io/home-assistant/{arch}-homeassistant
+image: ghcr.io/evandcoleman/{arch}-homeassistant
 build_from:
   amd64: ghcr.io/home-assistant/amd64-homeassistant-base:2023.08.0
 labels:
