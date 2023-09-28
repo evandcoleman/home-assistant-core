@@ -157,7 +157,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build base image
-        uses: home-assistant/builder@2023.09.0
+        uses: evandcoleman/home-assistant-builder@master
         with:
           args: |
             $BUILD_ARGS \
